@@ -1,9 +1,9 @@
-{% set payment_methods = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] %}
+{% set payment_methods = ["credit_card", "coupon", "bank_transfer", "gift_card"] %}
 
 with
-    orders as (select * from {{ ref('stg_orders') }}),
+    orders as (select * from {{ ref("stg_orders") }}),
 
-    payments as (select * from {{ ref('stg_payments') }}),
+    payments as (select * from {{ ref("stg_payments") }}),
 
     order_payments as (
 
